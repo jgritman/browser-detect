@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>User Info Test</title>
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+</head>
+<body>
+
+<div>
+<p>
+<span>Browser: </span >
+<span id="browserText">
+</span >
+</p >
+</div>
+
+<div>
+<p>
+<span>OS: </span >
+<span id="osText">
+</span >
+</p >
+</div>
+
+<div>
+<p>
+<span>Flash Version: </span >
+<span id="flashText">
+</span >
+</p >
+</div>
+
+<div>
+<p>
+<span>Connection Speed: </span >
+<span id="connectionSpeedText">
+</span >
+</p >
+</div>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.min.js"></script>
+<script type="text/javascript" src="js/BrowserDetect.js"></script>
+<script type="text/javascript" src="js/flash_detect_min.js"></script>
+<script type="text/javascript" src="js/downloadSpeed.js"></script>
+<script type="text/javascript">
+	$('#browserText').html(BrowserDetect.browser + " " + BrowserDetect.version);
+	$('#osText').html(BrowserDetect.OS);
+	$('#flashText').html(FlashDetect.installed ? 
+		FlashDetect.major + "." + FlashDetect.minor + "." + FlashDetect.revision : 
+		"Not Installed");
+</script>
+
+</body>
+</html>
