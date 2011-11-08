@@ -1,1 +1,1 @@
-A simple html page to display the user's browser, operating system, flash version and connecion speed.
+A simple html page to display the user's browser, operating system, flash version and connection speed.
